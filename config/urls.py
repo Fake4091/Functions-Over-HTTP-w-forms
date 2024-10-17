@@ -19,7 +19,7 @@ from django.urls import path
 from app.views import hey_you_view, how_old_view, order_view
 
 urlpatterns = [
-    path("hey/<str:name>/", hey_you_view),
+    path("hey/<str:name>", hey_you_view),
     path("age-in/<int:end>/<int:birthyear>", how_old_view),
     path("order-total/<int:burgers>/<int:fries>/<int:drinks>", order_view),
     path("admin/", admin.site.urls),

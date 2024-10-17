@@ -6,7 +6,7 @@ from django.http.request import HttpRequest
 
 
 def hey_you_view(request: HttpRequest, name) -> HttpResponse:
-    return HttpResponse(f"Hey {name.title()}!")
+    return HttpResponse(f"Hey, {name}!")
 
 
 def how_old_view(request: HttpRequest, end, birthyear) -> HttpResponse:
