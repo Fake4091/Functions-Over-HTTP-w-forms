@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'hey' %}">
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+{% if name != None %}
+<p>Hey, {{ name }}!</p>
+{% endif %} {% endblock content %}

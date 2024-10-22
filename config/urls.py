@@ -19,8 +19,8 @@ from django.urls import path
 from app.views import hey_you_view, how_old_view, order_view
 
 urlpatterns = [
-    path("hey/<str:name>", hey_you_view),
-    path("age-in/<int:end>/<int:birthyear>", how_old_view),
-    path("order-total/<int:burgers>/<int:fries>/<int:drinks>", order_view),
+    path("hey", hey_you_view, name="hey"),
+    path("age-in", how_old_view, name="age-in"),
+    path("order-total", order_view, name="order-total"),
     path("admin/", admin.site.urls),
 ]

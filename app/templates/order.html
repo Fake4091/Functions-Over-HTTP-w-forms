@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'order-total' %}">
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+{% if total != None %}
+<p>{{ burgers }} burgers, {{ fries }} fries, and {{ drinks }} drinks cost ${{ total }}</p>
+{% endif %} {% endblock content %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'age-in' %}">
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+{% if age != None %}
+<p>Someone born in {{ birthyear }} will be {{ age }} in {{ end }}</p>
+{% endif %} {% endblock content %}
